@@ -1,0 +1,71 @@
+:root{
+    --font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #d9e8ff;
+    font-family: var(--font-family);
+}
+
+#title-bar, #status-bar  {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3686ff;
+    padding: 12px;
+}
+
+#title-bar .title {
+    font-size: 1.5rem;
+}
+
+#title-bar #restart-button {
+    border: none;
+    border-radius: 4px;
+    background-color: #FFBC36;
+    font-family: var(--font-family);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#game-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    height: calc(100% - 88px);
+}
+
+#game-wrapper #tic-tac-toe {
+    display: flex;
+    flex-wrap: wrap;
+    height: 402px;
+    width: 402px;
+    border: 1px solid black;
+}
+
+#game-wrapper #tic-tac-toe .field {
+    height: 133.33px;
+    width: 133.33px;
+    border: 1px solid black;
+    cursor: pointer;
+    display: flex;
+}
+
+#game-wrapper #tic-tac-toe .field.font-X{
+    color: #3686ff;
+}
+
+#game-wrapper #tic-tac-toe .field.font-O{
+    color: #FFBC36;
+}
+
+#game-wrapper #tic-tac-toe .field  .value{
+    margin: auto;
+    font-size: 3rem;
+}
