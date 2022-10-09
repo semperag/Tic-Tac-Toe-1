@@ -11,6 +11,8 @@ body {
     height: 100vh;
     background-color: #d9e8ff;
     font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
 }
 
 #title-bar, #status-bar  {
@@ -33,6 +35,15 @@ body {
     cursor: pointer;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+td {
+    text-align: center;
+}
+
+
 #game-wrapper {
     display: flex;
     justify-content: center;
@@ -42,19 +53,20 @@ body {
 }
 
 #game-wrapper #tic-tac-toe {
-    display: flex;
     flex-wrap: wrap;
-    height: 402px;
-    width: 402px;
-    border: 1px solid black;
+    max-height: 400px;
+    height: 80vw;
+    max-width: 400px;
+    width: 80vw;
 }
 
 #game-wrapper #tic-tac-toe .field {
-    height: 133.33px;
-    width: 133.33px;
-    border: 1px solid black;
+    max-height: 133.33px;
+    max-width: 133.33px;
+    height: 33%;
+    width: 33%;
+    border: 2px solid black;
     cursor: pointer;
-    display: flex;
 }
 
 #game-wrapper #tic-tac-toe .field.font-X{
@@ -68,4 +80,41 @@ body {
 #game-wrapper #tic-tac-toe .field  .value{
     margin: auto;
     font-size: 3rem;
+}
+
+@media screen and (max-height: 600px) {
+    #game-wrapper #tic-tac-toe {
+        max-height: 400px;
+        height: 60vh;
+        max-width: 400px;
+        width: 60vh;
+    }
+
+    #game-wrapper #tic-tac-toe .field  .value{
+        margin: auto;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #game-wrapper #tic-tac-toe {
+        max-height: 400px;
+        height: 80vw;
+        max-width: 400px;
+        width: 80vw;
+    }
+
+    #game-wrapper #tic-tac-toe .field  .value{
+        margin: auto;
+        font-size: 2rem;
+    }
+
+    @media screen and (max-height: 525px) {
+        #game-wrapper #tic-tac-toe {
+            max-height: 400px;
+            height: 55vh;
+            max-width: 400px;
+            width: 55vh;
+        }
+    }
 }
